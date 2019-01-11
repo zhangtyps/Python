@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
-#version 0.2
+#version 0.3，兼容python2和python3
 #访问我的GitHub获取最新版的代码：https://github.com/zhangtyps/pylearn
 
-import os
+import os,sys
 
 '''需要修改的变量'''
 #站点目录地址，目录最后的斜杠可加可不加
-website_path='/data1/www/changan_dev'
+website_path='/data1/www/qingbo_pubsentiment/'
 #研发给的更新文件的路径（一定要按照规定格式写入，例如：/trunk/home/protected/components/QBSolrParams.php）
 log_path='./update.log'
 
@@ -33,13 +33,13 @@ def sort_log():
         if len(update_path)<(len(website_path)+5):
             continue
         svn_up_list.append(update_path)
-        #update_path=website_path+add_path
-        #update(update_path)
-        #print(update_path)
     print('即将更新以下文件：')
     for i in svn_up_list:
         print(i)
-    return_value=input('是否确定更新(y/n)?')
+    if sys.version[0]==2:
+        return_value=raw_input('是否确定更新(y/n)?')
+    else:
+        return_value=input('是否确定更新(y/n)?')
     if return_value=='y' or return_value=='yes':
         update(svn_up_list)
     else:
