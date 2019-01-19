@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 #访问我的GitHub获取最新版的代码：https://github.com/zhangtyps/pylearn
-#version 0.2
+#version 0.3 修改了39行自适应python版本的一个bug
 
 import os,sys
 
@@ -9,7 +9,7 @@ import os,sys
 #站点目录地址，目录最后的斜杠可加可不加
 website_path='/data1/www/changan_dev'
 #研发给的更新文件的路径（一定要按照规定格式写入，例如：/trunk/home/protected/components/QBSolrParams.php）
-log_path='./demo.log'
+log_path='./svn_path.log'
 
 
 def update(list_update):
@@ -36,7 +36,7 @@ def sort_log():
     print('即将更新以下文件：')
     for i in svn_up_list:
         print(i)
-    if sys.version[0]==2:
+    if sys.version[0]=='2':
         return_value=raw_input('是否确定更新(y/n)?')
     else:
         return_value=input('是否确定更新(y/n)?')
