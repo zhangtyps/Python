@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
-#访问我的GitHub获取最新版的代码：https://github.com/zhangtyps/pylearn
+#访问我的GitHub获取最新版的代码：https://github.com/zhangtyps
 #version 0.3 修改了39行自适应python版本的一个bug
 
 import os,sys

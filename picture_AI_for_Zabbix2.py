@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
-# 针对老版本zabbix2.4统计无法导出这种情况，利用了百度云AI图片识别，把zabbix里的数据识别出来
-# 因为是AI识别，所以这段代码还有很多不稳定的地方，有时候导出表格不正常请重新截一张图试试
+#访问我的GitHub获得最新的代码：https://github.com/zhangtyps
+#针对老版本zabbix2.4统计无法导出这种情况，利用了百度云AI图片识别，把zabbix里的数据识别出来
+#因为是AI识别，所以这段代码还有很多不稳定的地方，有时候导出表格不正常请重新截一张图试试
 
 from aip import AipOcr
 import json,csv,re
