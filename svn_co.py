@@ -4,13 +4,11 @@
 #站点一键部署
 #version 1.0 
 
-'''
-使用方法：
-1.修改此脚本的变量dir_path的值（要部署的路径位置）
-2.修改svn内网地址
-3.调用脚本时必须要提供一个svn的checkout链接作为参数1
-例如：./svn_co.py https://192.168.1.1/svn/H5/dx_lhj
-'''
+#使用方法：
+#1.修改此脚本的变量dir_path的值（要部署的路径位置）
+#2.修改svn内网地址
+#3.调用脚本时必须要提供一个svn的checkout链接作为参数1
+#例如：./svn_co.py https://192.168.1.1/svn/H5/dx_lhj
 
 import sys,os,re
 
