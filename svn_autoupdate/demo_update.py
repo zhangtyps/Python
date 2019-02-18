@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding:utf-8 -*-
 #version 0.2
 #访问我的GitHub获取最新版的代码：https://github.com/zhangtyps/pylearn

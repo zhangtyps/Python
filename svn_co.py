@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding:utf-8 -*-
 #访问我的GitHub获得最新版的脚本：https://github.com/zhangtyps
 #站点一键部署

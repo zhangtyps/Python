@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding:utf-8 -*-
 #访问我的GitHub获得最新的代码：https://github.com/zhangtyps
 #针对老版本zabbix2.4统计无法导出这种情况，利用了百度云AI图片识别，把zabbix里的数据识别出来
