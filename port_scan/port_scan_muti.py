@@ -12,6 +12,8 @@
 # here put the import lib
 import nmap, threading, sys, json, queue
 
+maxThread = 10
+
 
 class MyThread(threading.Thread):
     def __init__(self, queue, ip, dict_main):
@@ -37,7 +39,7 @@ def read_file_to_dict(path, dict_main):
                 break
             dict_main.update({
                 line[2]: {
-                    'os':line[0],
+                    'os': line[0],
                     'name': line[1],
                     'intranet_ip': line[3],
                     'manager': line[4],
@@ -90,7 +92,7 @@ def main():
     path = 'host_information.log'
     read_file_to_dict(path, dict_hostinfo)
 
-    q = queue.Queue(2)
+    q = queue.Queue(maxThread)
     list_ip = list(dict_hostinfo.keys())  #所有的ip列表
     for ip in list_ip:
         q.put(ip)
