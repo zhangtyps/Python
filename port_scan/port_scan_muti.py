@@ -6,7 +6,7 @@
 @Author : zhangtyps
 @GitHub : https://github.com/zhangtyps
 @Version : 1.0
-@Desc : 端口扫描，读入log文件，写出一个端口扫描的结果
+@Desc : 多线程端口扫描。读入log文件（log文件格式示例host_information.log，也可以是逗号隔开），输出一个json格式的端口扫描结果
 '''
 
 # here put the import lib
