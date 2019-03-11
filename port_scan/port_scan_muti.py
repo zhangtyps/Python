@@ -80,9 +80,9 @@ def update_port_info(ip, dict_port, dict_main):
             }
 
 
-def output_json_file(dict_main):
+def output_json_file(dict_main, file_name):
     json_str = json.dumps(dict_main, ensure_ascii=False)
-    with open('scan_result.json', 'w+', encoding='utf-8') as f:
+    with open(file_name, 'w+', encoding='utf-8') as f:
         f.write(json_str)
 
 
@@ -100,7 +100,7 @@ def main():
         t.start()
     q.join()
     print("all is over!")
-    output_json_file(dict_hostinfo)
+    output_json_file(dict_hostinfo, 'scan_result.json')
 
 
 if __name__ == '__main__':

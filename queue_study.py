@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 '''
-@File : 2.py
+@File : queue_study.py
 @Time : 2019/03/08 15:16:08
 @Author : zhangtyps
 @GitHub : https://github.com/zhangtyps
@@ -10,10 +10,7 @@
 '''
 
 # here put the import lib
-import threading
-import queue
-import random
-import time
+import threading, queue, random, time
 
 
 class MyThread(threading.Thread):
