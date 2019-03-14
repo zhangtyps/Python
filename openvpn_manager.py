@@ -5,7 +5,7 @@
 @Time : 2019/03/11 16:08:05
 @Author : zhangtyps
 @GitHub : https://github.com/zhangtyps
-@Version : 1.0
+@Version : 1.1
 @Desc : 生成随机密码，自动创建或删除openvpn账户，生成用户证书（pexpect交互式操作示例）
 '''
 
@@ -162,7 +162,11 @@ def move_cert(cert_name, cert_path='/etc/openvpn/easy-rsa/2.0/keys/', destinatio
 
 if __name__ == '__main__':
     if len(sys.argv) <= 1:
-        print('''【未检测到参数，进入交互模式】
+        print('''参数介绍:
+        ./vpn.py -a user1 新开user1账户和证书
+        ./vpn.py -d user2 创建一个名为user2证书
+        ./vpn.py -c user3 删除用户user3
+        【因未检测到参数，进入交互模式！】
         请输入对应数字编号使用功能：
             1)  新开账户和证书
             2)  证书续期
