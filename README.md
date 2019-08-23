@@ -38,6 +38,6 @@ svn部署脚本，一键部署新的负载项目；如果有相同项目文件�
 
 ### 去掉有道云笔记pc版广告
 ```console
-没写完，这坑先占着
+自行修改path的值，运行即可
 ./remove_youdaonote_ads.py
 ```
