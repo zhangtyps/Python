@@ -10,16 +10,20 @@
 '''
 
 # here put the import lib
-import os, re
+import os, re,sys
 import xml.etree.ElementTree as ET
 
 #有道云笔记xml页面布局文件位置
 path = r'D:\Program Files (x86)\Youdao\YoudaoNote\theme\build.xml'
 
-#读取xml文件
-tree = ET.parse(path)
-#获取根节点
-root = tree.getroot()
+
+try:
+    #读取xml文件,获取根节点
+    tree = ET.parse(path)
+    root = tree.getroot()
+except Exception as e:
+    print('读取xml文件出错，请检查代码里path路径的值'+e)
+
 
 # #遍历根节点下全部tag和属性attrib
 # for child in root:
