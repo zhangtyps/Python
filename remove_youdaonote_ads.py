@@ -5,14 +5,15 @@
 @Time : 2019/03/15 17:34:39
 @Author : zhangtyps
 @GitHub : https://github.com/zhangtyps
-@Version : 1.0
-@Desc : 一键移出有道云笔记界面广告
+@Version : 1.1
+@Desc : 一键移除有道云笔记界面广告
 '''
 
 # here put the import lib
 import os, re
 import xml.etree.ElementTree as ET
 
+#有道云笔记xml页面布局文件位置
 path = r'D:\Program Files (x86)\Youdao\YoudaoNote\theme\build.xml'
 
 #读取xml文件
@@ -46,9 +47,9 @@ def set_attrib(xml_tag_path,set_tag,set_attrib):
     try:
         for node in root.findall(xml_tag_path):
             node.set(set_tag,set_attrib)
-            print(str(node.tag)+" 的值已修改为"+str(node.attrib))
+            print(str(node.tag)+" 的值已修改为：\n"+str(node.attrib)+"\n")
     except Exception as e:
-        print('发生了未知错误，错误信息如下：'+e)
+        print('发生了未知错误，错误信息如下：\n'+e)
         pass
     
 #修改xml属性
