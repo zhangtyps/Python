@@ -5,7 +5,7 @@
 @Time : 2019/03/15 17:34:39
 @Author : zhangtyps
 @GitHub : https://github.com/zhangtyps
-@Version : 1.1
+@Version : 1.2
 @Desc : 一键移除有道云笔记界面广告
 '''
 
