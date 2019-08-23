@@ -17,9 +17,9 @@ import xml.etree.ElementTree as ET
 path = r'D:\Program Files (x86)\Youdao\YoudaoNote\theme\build.xml'
 
 #读取xml文件
-tree=ET.parse(path)
+tree = ET.parse(path)
 #获取根节点
-root=tree.getroot()
+root = tree.getroot()
 
 # #遍历根节点下全部tag和属性attrib
 # for child in root:
@@ -43,18 +43,25 @@ root=tree.getroot()
 #     node.set('bounds','0,0,0,0')
 #     print(node.tag,node.attrib)
 
-def set_attrib(xml_tag_path,set_tag,set_attrib):
+
+def set_attrib(xml_tag_path, set_tag, set_attrib):
     try:
         for node in root.findall(xml_tag_path):
-            node.set(set_tag,set_attrib)
-            print(str(node.tag)+" 的值已修改为：\n"+str(node.attrib)+"\n")
+            node.set(set_tag, set_attrib)
+            print(str(node.tag) + " 的值已修改为：\n" + str(node.attrib) + "\n")
     except Exception as e:
-        print('发生了未知错误，错误信息如下：\n'+e)
-        pass
-    
+        print('发生了未知错误，错误信息如下：\n' + e)
+
+
 #修改xml属性
-set_attrib(r'MainForm/PanelClient/SplitterLeft/PanelSecond/NotePage/SplitterMid/PanelFirst/AdWraperMid','bounds','0,0,0,0')
-set_attrib(r'control/PanelAd/MiddlePhotoPanel/AdPhoto','Bounds','0,0,0,130')
+set_attrib(
+    r'MainForm/PanelClient/SplitterLeft/PanelSecond/NotePage/SplitterMid/PanelFirst/AdWraperMid',
+    'bounds', '0,0,0,0')
+set_attrib(r'control/PanelAd/MiddlePhotoPanel/AdPhoto', 'Bounds', '0,0,0,130')
 
 #重新写入xml文件
-tree.write(path, xml_declaration=True)
+try:
+    tree.write(path, xml_declaration=True)
+    print('xml文件写入完成，请重新打开有道云笔记客户端，体验无广告的界面！')
+except Exception as e:
+    print('写入文件错误，错误信息如下：' + e)
