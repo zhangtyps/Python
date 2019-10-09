@@ -6,7 +6,7 @@
 @Author : zhangtyps
 @GitHub : https://github.com/zhangtyps
 @Version : 1.2
-@Desc : 一键移除有道云笔记界面广告
+@Desc : 一键移除有道云笔记界面广告，xml示例
 '''
 
 # here put the import lib
