@@ -3,6 +3,7 @@
 ```console
 .remove_youdaonote_ads.py
 ```
+2020/1/22 windows版v6.10测试依旧可用
 #
 
 
