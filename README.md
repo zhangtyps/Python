@@ -1,11 +1,37 @@
 # Python
+### 数据可视化，生成柱状图、饼图、折线图等
+```console
+.pyecharts.py
+```
+查库数据，然后将数据通过pyecharts生成一个饼图和折线图，通过requests调用邮件接口，每日自动发送给业务
+
+### 用于连接pg库和mysql库的简单代码
+```console
+.db-pg_db-mysql.py
+```
+连接pg库和mysql库的python模块使用展示
+
+
+### 中国节假日判断，包含月底最后一天工作日和本周最后一天工作日逻辑判断
+```console
+.holiday_check.py
+```
+中国节假日判断，包含是否是本周工作日最后一天判断，以及是否是月底最后一天工作日判断，用于POST某些机器人API地址，实现定时推送某些信息
+#
+
+### selenium网页自动化操作
+```console
+.selenium.py
+```
+通过selenium模块+chrome-linux，能够在linux上做到后台打开网页并点击网页相关按钮，实现一些页面上的配置项自动调整操作（当然selenium功能强大，能实现的远远不止这些）
+#
+
 ### 一键移除有道云笔记广告
 ```console
 .remove_youdaonote_ads.py
 ```
 2020/1/22 windows版v6.10测试依旧可用
 #
-
 
 ### OpenVPN全自动管理
 ```console
