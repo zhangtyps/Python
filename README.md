@@ -1,4 +1,12 @@
 # Python
+### selenium+pandas页面自动化操作+表格分析+邮件发送
+```console
+./selenium+pandas+htmltable/emergency_drill.py 主要侧重于pandas使用
+./selenium+pandas+htmltable/mail_point_for_pks.py 主要侧重于htmltable遍历行的特殊标记
+```
+通过selenium模拟页面操作，下载指定页面上的表格，使用pandas对表格内容进行分析（将本月需要做应急演练的系统筛选出来，并发送邮件给收件人处理）
+#
+
 ### 数据可视化，生成柱状图、饼图、折线图等
 ```console
 .pyecharts.py
